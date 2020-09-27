@@ -8,6 +8,39 @@ This repo serves as an instruction for how to carry out an analysis of word embe
 
 The above mentioned code and workflow is made available in this repo through an annotated Jupyter Notebook (`datatheory-w2v.ipynb`).
 
+
+```
+# Import libraries and set up logging
+import os
+import gensim, logging
+logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
+
+# Prepare a memory-friendly iterator that won't try to keep the entire sentence list in RAM 
+class MySentences(object):
+    def __init__(self, dirname):
+        self.dirname = dirname
+ 
+    def __iter__(self):
+        for fname in os.listdir(self.dirname):
+            for line in open(os.path.join(self.dirname, fname)):
+                yield line.split()
+ 
+ 
+# Point it to a directory containing one or several files with one sentence per line 
+sentences = MySentences('sentences')
+
+# Train the w2v model
+model = gensim.models.Word2Vec(sentences, min_count=40) # exclude words occurring less than 40 times
+
+# If you don't plan to train the model any further, calling 
+# init_sims will make the model much more memory-efficient.
+model.init_sims(replace=True)
+
+# Save the model to disk
+model.save('reddit-w2v.model')
+```
+
+
 ----
 Lindgren, S. (2020) [*Data Theory: Interpretive Sociology and Computational Methods*](https://politybooks.com/bookdetail/?isbn=9781509539277&subject_id=3&tag_id=42). Cambridge: Polity.
 
