@@ -6,8 +6,11 @@ This repo serves as an instruction for how to carry out an analysis of word embe
 >
 >The data for the case study in this chapter was retrieved from [pushshift.io](https://pushshift.io), which is an open big data project that stores copies of all Reddit posts and comments. The analysis to follow is based on all data for 2018, which corresponds to more than 1.2 billion comments. A word2vec model was created, based on all of these comments using [the gensim package](https://github.com/RaRe-Technologies/gensim) for the Python programming language. The workflow and code used to create the model is available at [github.com/simonlindgren/datatheory-reddit-w2v](https://github.com/simonlindgren/datatheory-reddit-w2v). With the model created, it can be queried in a variety of ways, by posing questions, the responses to which help reveal the site’s linguistic structure (pp. 104-105).
 
-The above mentioned code and workflow is made available in this repo through an annotated Jupyter Notebook (`datatheory-w2v.ipynb`).
+## Workflow and code
 
+With the data gathered from pushshift.io, the field `body` was extracted from the downloaded json data, and split by sentence, into one big file with one sentence per line. Punctuation and leading/trailing whitespace was removed. The resulting sentences were saved in `sentences/reddit-sentences-2018`.
+
+The model was trained using gensim with the code in the cell below (based on this tutorial).
 
 ```
 # Import libraries and set up logging
