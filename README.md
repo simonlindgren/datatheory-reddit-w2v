@@ -10,7 +10,7 @@ This repo serves as an instruction for how to carry out an analysis of word embe
 
 With the data gathered from pushshift.io, the field `body` was extracted from the downloaded json data, and split by sentence, into one big file with one sentence per line. Punctuation and leading/trailing whitespace was removed. The resulting sentences were saved in `sentences/reddit-sentences-2018`.
 
-The model was trained using gensim with the code in the cell below (based on this tutorial).
+The model was trained using gensim with the code in the cell below (based on [this tutorial](https://rare-technologies.com/word2vec-tutorial/)).
 
 ```
 # Import libraries and set up logging
