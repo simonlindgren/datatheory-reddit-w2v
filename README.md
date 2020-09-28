@@ -53,7 +53,7 @@ model.save('reddit-w2v.model')
 
 ### Two examples of visualisations
 
-Using [Gephi](https://github.com/gephi/gephi).
+Using [Gephi](https://github.com/gephi/gephi). Recursive queries for `most_similar` using similarity scores as edge weights.
 
 ![image](https://github.com/simonlindgren/datatheory-reddit-w2v/blob/master/images/word_network.png)
 
