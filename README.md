@@ -51,6 +51,16 @@ model.save('reddit-w2v.model')
 
 ![image](https://github.com/simonlindgren/datatheory-reddit-w2v/blob/master/images/doesnt_match.png)
 
+### Two examples of visualisations
+
+Using [Gephi](https://github.com/gephi/gephi).
+
+![image](https://github.com/simonlindgren/datatheory-reddit-w2v/blob/master/images/word_network.png)
+
+Using TensorFlow [Embedding Projector](https://projector.tensorflow.org/).
+
+
+![image](https://github.com/simonlindgren/datatheory-reddit-w2v/blob/master/images/word_embedding.png)
 
 ----
 Lindgren, S. (2020) [*Data Theory: Interpretive Sociology and Computational Methods*](https://politybooks.com/bookdetail/?isbn=9781509539277&subject_id=3&tag_id=42). Cambridge: Polity.
