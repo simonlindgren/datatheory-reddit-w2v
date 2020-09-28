@@ -43,6 +43,12 @@ model.init_sims(replace=True)
 model.save('reddit-w2v.model')
 ```
 
+## Querying the model
+
+Two examples of queries.
+
+![image](https://github.com/simonlindgren/datatheory-reddit-w2v/blob/master/images/most_simiilar.png)
+
 
 ----
 Lindgren, S. (2020) [*Data Theory: Interpretive Sociology and Computational Methods*](https://politybooks.com/bookdetail/?isbn=9781509539277&subject_id=3&tag_id=42). Cambridge: Polity.
