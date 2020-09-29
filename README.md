@@ -45,7 +45,7 @@ model.save('reddit-w2v.model')
 
 ## Querying the model
 
-### Two examples of queries.
+### Two examples of queries
 
 ![image](https://github.com/simonlindgren/datatheory-reddit-w2v/blob/master/images/most_simiilar.png)
 
